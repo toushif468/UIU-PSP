@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+}
+
+body {
+    overflow: auto;
+}
+
+.custom-btn {
+    font-size: 12px;
+    background-color: #131571;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.custom-btn-sec {
+    font-size: 12px;
+    background-color: #b9b9b9;
+    color: rgb(0, 0, 0);
+    border-radius: 3px;
+}
+
+.custom-btn:hover {
+    border: 1px solid #131571;
+    background-color: #080946;
+    color: rgb(241, 241, 241);
+}
+
+.custom-btn-sec:hover {
+    border: 1px solid rgb(69, 69, 69);
+    background-color: #b9b9b9;
+    color: #212121;
+}
+
+.user_dashboard {
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url(../resources/bg.png);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../resources/bg9.jpg); */
+    /* background-color: rgb(24, 23, 23); */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    overflow: auto;
+}
+
+.home-page-wrapper {
+    padding: 20px 20vh 0px;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+/* ================================================== */
+
+.profile_pic{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.profile_pic img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+.user_dashboard .top_bar {
+    width: 100%;
+    background-color: #1e2022;
+    backdrop-filter: blur(1px);
+    border-radius: 5px;
+}
+
+.user_dashboard .top_bar .container-fluid {
+    padding: 0 5vw;
+    height: fit-content;
+}
+
+.user_dashboard .top_bar .navbar-brand {
+    font-family: 'Concert One';
+    font-size: 1.8rem;
+}
+
+
+.problem_post_icon {
+    font-size: 16px;
+    color: #ededed !important;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.problem_post_icon:hover {
+    font-size: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    transition: all .2s;
+
+}
+
+.problem_post_icon:active {
+    color: white !important;
+}
+
+.problem_post_icon::before {
+    content: '';
+    display: block;
+    background: url(../resources/post_problem.png);
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0 6px 0 0;
+    transition: all .2s;
+}
+
+.problem_post_icon:hover::before {
+    content: '';
+    display: block;
+    background: url(../resources/post_problem_color.png);
+    background-position: center;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 0 6px 0 0;
+    color: white;
+}
+
+.qp_upload {
+    font-size: 16px;
+    color: #ededed !important;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.qp_upload:hover {
+    font-size: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    transition: all .2s;
+
+}
+
+.qp_upload:active {
+    color: white;
+}
+
+.qp_upload::before {
+    content: '';
+    display: block;
+    background: url(../resources/qp.png);
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0 6px 0 0;
+    transition: all .2s;
+}
+
+.qp_upload:hover::before {
+    content: '';
+    display: block;
+    background: url(../resources/qpc.png);
+    background-position: center;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 0 6px 0 0;
+    color: white;
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.user_dashboard .top_bar nav {
+    padding: 5px 0px;
+}
+
+.user_dashboard .top_bar .navbar-toggler {
+    padding: 2px 4px;
+}
+
+.user_dashboard .top_bar .navbar-toggler span {
+    width: 30px;
+    height: 30px;
+}
+
+.user_dashboard .user_dashboard_container {
+    /* height: 90%; */
+    /* width: 1400px; */
+    width: 100%;
+    height: max-content;
+    margin-top: 20px;
+    /* box-shadow: 10px 10px 50px 5px #000000; */
+    background-color: #1e2022;
+    display: flex;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    margin-bottom: 30px;
+
+    /* overflow: hidden; */
+}
+
+.user_dashboard .user_activity {
+    flex: 4;
+    padding: 0px 2vh;
+    border-radius: 5px;
+    /* background-color: #00000035; */
+    height: 100vh;
+}
+
+.user_dashboard .user_activity .post-container {
+    height: 100%;
+    margin-top: 10px;
+    padding-right: 15px;
+    padding-left: 10px;
+    overflow-y: auto;
+}
+
+.post-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+
+    background-color: transparent;
+}
+
+.post-container::-webkit-scrollbar {
+    width: 8px;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+}
+
+.post-container::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+.user_dashboard .user_activity .posts {
+    height: max-content;
+}
+
+.user_dashboard .user_activity .tab-content {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(235, 235, 235, 0.56); */
+    height: 90%;
+}
+
+.user_dashboard .user_activity .tab-pane {
+    height: 100%;
+}
+
+.user_dashboard .user_activity .card {
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.469); */
+    background-color: rgba(14, 14, 14, 0.793);
+}
+
+.user_dashboard .user_activity .pblm-post-card {
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.user_dashboard .user_activity .pblm-post-card:hover {
+    transform: scale(1.02);
+}
+
+
+.user_dashboard .user_activity .card:last-child {
+    margin-bottom: 0;
+}
+
+.user_dashboard .user_activity .card .card-title {
+    color: rgb(226, 226, 226);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .4s ;
+}
+.user_dashboard .user_activity .card .card-title:hover {
+    color: rgb(255, 255, 255);
+    /* text-decoration: underline; */
+}
+
+.user_dashboard .user_activity .card .card-text {
+    color: #909090;
+    font-size: 14px;
+}
+
+.user_dashboard .card .card-bar .nav-link {
+    border: 1px solid #222222;
+    padding: 3px 0;
+    margin: 0 5px;
+}
+.user_dashboard .card .card-bar .nav-link:last-child {
+    border: none;
+    padding: 0;
+    text-align: right;
+    margin: 0 5px;
+}
+
+.user_dashboard .card .card-bar .nav-link:first-child {
+    margin-left: 0px;
+}
+
+.user_dashboard .card .related-topics {
+    display: flex;
+    align-items: center;
+}
+
+.user_dashboard .card .related-topics p:first-child {
+    color: #7a7a7a;
+}
+
+.user_dashboard .card .related-topics nav {
+    margin-left: 7px;
+}
+
+.user_dashboard .card .related-topics .nav-link {
+    padding: 2px 4px;
+    border: 1px solid #363636;
+
+}
+
+.user_dashboard .card .related-topics .nav-link.arrow {
+    border: none;
+}
+
+.user_dashboard .rated_students_list {
+    border-left: 2px solid rgb(28, 28, 28);
+    padding: 30px 20px 0px 0px;
+    
+}
+
+.user_dashboard .rated_students_list ul {
+    /* list-style-type: disc !important; */
+    margin-bottom: 10px;
+    border-radius: 5px;
+    list-style: none;
+}
+.user_dashboard .rated_students_list ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dddddd;
+}
+.user_dashboard .rated_students_list ul li h6{
+    font-weight: bolder;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+.user_dashboard .rated_students_list ul li span{
+    padding: 0 5px;
+    margin-left: 20px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    background-color: #f50;
+    color: white;
+}
+.user_dashboard .rated_students_list .list-group{
+    padding: 0 !important;
+}
+.user_dashboard .rated_students_list ul .list-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e45107;
+}
+.user_dashboard .rated_students_list ul .list-heading .user{
+    margin-left: 20px ;
+}
+.user_dashboard .rated_students_list ul .list-heading p{
+    /* text-align: center; */
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.7px;
+    margin: 0;
+}
+
+/* --------------search automaiton-------------------- */
+
+
+.course-search-list {
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+    padding: 0;
+    list-style: none;
+    overflow-y: auto;
+    max-height: 200px;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.list-items {
+    padding: 10px 5px;
+}
+
+.course-id-container {
+    position: relative;
+}
+
+.course-id-automate input:focus {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-shadow: none;
+}
+
+.list-items:hover {
+    background-color: #dddddd;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-footer button {
+    color: #fdfdfd;
+    border: none;
+    font-size: 13px;
+}
+/* .modal-content{
+    background-color: #eaeaeaed;
+}
+.modal-content input{
+    background-color: #eaeaead2 !important;
+}
+.modal-content textarea{
+    background-color: #eaeaead2;
+}
+.modal-content textarea:focus{
+    background-color: #eaeaead2;
+}
+.modal-content .cover{
+    background-color: #eaeaea !important;
+} */
+
+
+/* ----------------------------------------------------- */
+
+
+
+
+.rated_students_list .buttons .pblm-post {
+    font-size: 12px;
+    background-color: #131571;
+    color: #fff;
+
+}
+
+.rated_students_list .buttons .ques-up {
+    font-size: 12px;
+    background-color: #011c2e;
+    color: #fff;
+}
+
+
+.user-db-footer {
+    width: 100%;
+    height: 60px;
+    background-color: #22223b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-db-footer p{
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+}
+.user-db-footer span{
+    color: #f50;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+/* @media (max-width: 1366px) {
+    .user_dashboard .user_dashboard_container{
+        height: 87%;
+        width: 1100px;
+        margin-top: 10px;
+    }
+} */
